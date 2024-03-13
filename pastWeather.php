@@ -3,7 +3,7 @@ header('X-Content-Type-Options: nosniff');
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-$apiKey = 'e2c961871c72fc99013272acd1eb4283';
+$apiKey = 'API_KEY';
 
 $api_location = "haldwani";
 

@@ -1,7 +1,7 @@
 // OpenWeatherMap API key for fetching current weather data
 const apiKey = 'API-KEY';
 
-// DOM elements
+
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 const todayInfo = document.querySelector('.today-info');
@@ -9,7 +9,6 @@ const todayWeatherIcon = document.querySelector('.today-weather i');
 const todayTemp = document.querySelector('.weather-temp');
 const daysList = document.querySelector('.days-list');
 
-// Mapping OpenWeatherMap icon codes to Boxicons for weather icons
 const weatherIconMap = {
     '01d': 'sun',
     '01n': 'moon',
@@ -119,7 +118,7 @@ async function displayPastWeatherData(location) {
     try {
         const response = await fetch(`pastWeather.php?location=${location}`);
         const data = await response.json();
-        const daysToShow = 7; //showing last 7 days of past weather
+        const daysToShow = 7; 
 
         document.querySelector(".days-list").innerText = `${location} Past Weather`;
 
@@ -159,7 +158,7 @@ function showPastData(location) {
     const parsedData = JSON.parse(pastData);
 
     if (parsedData) {
-        displayPastWeatherData(location); // Display past weather data
+        displayPastWeatherData(location); 
     } else {
         console.log("No past weather data found in localStorage.");
     }
@@ -180,7 +179,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         await fetchWeatherData(defaultLocation);
     }
 
-    showPastData(defaultLocation); // Show past data for the default location
+    showPastData(defaultLocation); 
 });
 
 searchBtn.addEventListener("click", async () => {
@@ -193,7 +192,7 @@ searchBtn.addEventListener("click", async () => {
         await fetchWeatherData(enteredLocation);
     }
 
-    showPastData(enteredLocation); // Show past data for the entered location
+    showPastData(enteredLocation); 
 });
 
 function displayWeatherData(data) {

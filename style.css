@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/*Student name: Pratisha Bista */
-/*Student ID: 2408284 */
-/* Importing the Poppins font from Google Fonts */
-/* Resetting default styles and applying global styles */
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +15,6 @@ body{
     justify-content: center;
 }
 
-/* Main container for the Weather App */
 .container{
     height: 400px;
     background-color:  #8AAAE5;
